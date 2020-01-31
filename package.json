@@ -1,0 +1,21 @@
+{
+  "name": "smvdu_fw_client",
+  "version": "1.0.0",
+  "description": "A node based headless firewall client to automatically log into the SMVDU firewall without a browser",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "gulzarsuhail",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gulzarsuhail/smvdu_firewall_client.git"
+  },
+  "dependencies": {
+    "console-stamp": "^3.0.0-rc3.0",
+    "querystring": "^0.2.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5"
+  }
+}
