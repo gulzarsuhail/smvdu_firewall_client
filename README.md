@@ -15,9 +15,10 @@ This client was tested on WSL Linux, Linux Mint and Raspbian (arm).
 ## Setup
 
 1. **Install nodejs and npm on your machine.**
- For ubuntu based Linux Distributions (e.g Linux Mint, Raspbian), use the command
+ For ubuntu based Linux Distributions (e.g Linux Mint, Raspbian), while connected to the internet, use the command
 
-       $ sudo apt install nodejs npm -y
+       $ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+       $ sudo apt-get install -y nodejs
 
    For other operating systems, check the [nodejs website](https://nodejs.org/en/).
 
@@ -37,8 +38,8 @@ This client was tested on WSL Linux, Linux Mint and Raspbian (arm).
        username:  "your_firewall_username",
        password:  "your_firewall_password",
 
-5. **Start the client**
- While in the smvdu_firewall_client folder, run
+5. **(Optional) Test the client**
+ Log out of the browser based authentication and while in the smvdu_firewall_client folder, run
  
        $ npm start
    You should output similar to
@@ -49,10 +50,12 @@ This client was tested on WSL Linux, Linux Mint and Raspbian (arm).
        [01/02/2020 01:31:44] [LOG]   Logged out successfully
        [01/02/2020 01:31:44] [LOG]   Logged in successfully as your_firewall_username
 
-6. **(Optional) Set up client as a pm2 service and auto start on start-up**
- While in the  **smvdu_firewall_client** folder,
+ To stop the client, press ctrl+c on your keyboard
+
+6. **Set up client as a pm2 service and auto start on start-up**
+ While in the  **smvdu_firewall_client** folder and while connected to the internet,
  
-       $ npm install -g pm2
+       $ sudo npm install -g pm2
        $ pm2 start app.js
        $ pm2 save
     
